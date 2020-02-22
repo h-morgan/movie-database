@@ -7,9 +7,39 @@ public class Actor {
 	private String name;
 	private ArrayList<Movie> movies;
 	
-	public Actor(String name) {
-		this.name = name;
-		movies = new ArrayList<>();
+	//constructor
+	public Actor() {
+		this.name = "";
+		this.movies = new ArrayList<Movie>();
 	}
+
+	//getters and setters
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ArrayList<Movie> getMovies() {
+		return movies;
+	}
+
+	public void setMovies(ArrayList<Movie> movies) {
+		this.movies = movies;
+	}
+	
+	@Override
+	public boolean equals(Object a) {
+		Actor act = (Actor) a;
+		if (name == act.name) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	
 
 }
